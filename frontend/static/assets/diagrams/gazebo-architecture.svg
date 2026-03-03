@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">
+    Gazebo System Architecture
+  </text>
+  
+  <!-- Gazebo Server -->
+  <rect x="250" y="60" width="300" height="80" rx="10" fill="#4CAF50"/>
+  <text x="400" y="95" font-family="Arial" font-size="18" text-anchor="middle" fill="white">
+    Gazebo Server
+  </text>
+  <text x="400" y="120" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    Physics Engine • Rendering
+  </text>
+  
+  <!-- Physics Engine -->
+  <rect x="50" y="180" width="150" height="80" rx="10" fill="#2196F3"/>
+  <text x="125" y="215" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Physics Engine
+  </text>
+  <text x="125" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    ODE • Gravity • Collision
+  </text>
+  
+  <!-- Models -->
+  <rect x="250" y="180" width="150" height="80" rx="10" fill="#FF9800"/>
+  <text x="325" y="215" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Models
+  </text>
+  <text x="325" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Robots • Obstacles
+  </text>
+  
+  <!-- Plugins -->
+  <rect x="450" y="180" width="150" height="80" rx="10" fill="#9C27B0"/>
+  <text x="525" y="215" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Plugins
+  </text>
+  <text x="525" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Sensors • Control
+  </text>
+  
+  <!-- ROS 2 Bridge -->
+  <rect x="600" y="180" width="150" height="80" rx="10" fill="#F44336"/>
+  <text x="675" y="215" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    ROS 2 Bridge
+  </text>
+  <text x="675" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    gazebo_ros
+  </text>
+  
+  <!-- Arrows -->
+  <path d="M125 180 L125 150 L300 150 L300 140" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M325 180 L325 150 L320 150 L325 140 L330 150 L325 140" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M525 180 L525 150 L500 150 L500 140" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M675 180 L675 150 L500 150 L500 140" stroke="#666" stroke-width="3" fill="none"/>
+  
+  <!-- ROS 2 Network -->
+  <rect x="600" y="300" width="150" height="60" rx="10" fill="#00BCD4"/>
+  <text x="675" y="325" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    ROS 2 Topics
+  </text>
+  <text x="675" y="345" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    /cmd_vel • /odom • /scan
+  </text>
+  
+  <path d="M675 260 L675 300" stroke="#666" stroke-width="3" fill="none"/>
+</svg>

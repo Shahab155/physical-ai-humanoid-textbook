@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <rect width="900" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">
+    Unity Digital Twin Sync Architecture
+  </text>
+
+  <!-- Gazebo Simulation -->
+  <rect x="50" y="120" width="150" height="80" rx="10" fill="#4CAF50"/>
+  <text x="125" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Gazebo
+  </text>
+  <text x="125" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Robot Simulation
+  </text>
+
+  <!-- ROS 2 Topics -->
+  <rect x="280" y="120" width="150" height="80" rx="10" fill="#F44336"/>
+  <text x="355" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    ROS 2 Topics
+  </text>
+  <text x="355" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    /odom • /joint_states
+  </text>
+
+  <!-- TCP Connector -->
+  <rect x="510" y="120" width="150" height="80" rx="10" fill="#FF9800"/>
+  <text x="585" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    ROS-TCP-Connector
+  </text>
+  <text x="585" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Port 10000
+  </text>
+
+  <!-- Unity Scene -->
+  <rect x="700" y="100" width="150" height="120" rx="10" fill="#9C27B0"/>
+  <text x="775" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Unity Scene
+  </text>
+
+  <!-- Humanoid Robot Hierarchy -->
+  <rect x="730" y="170" width="90" height="15" rx="3" fill="#673AB7"/>
+  <text x="775" y="180" font-family="Arial" font-size="10" text-anchor="middle" fill="white">
+    HumanoidRobot
+  </text>
+
+  <!-- Components -->
+  <rect x="730" y="190" width="40" height="10" rx="2" fill="#3F51B5"/>
+  <text x="750" y="198" font-family="Arial" font-size="8" text-anchor="middle" fill="white">
+    StateSync
+  </text>
+
+  <rect x="780" y="190" width="40" height="10" rx="2" fill="#3F51B5"/>
+  <text x="800" y="198" font-family="Arial" font-size="8" text-anchor="middle" fill="white">
+    Controller
+  </text>
+
+  <!-- Data Flow Arrows -->
+  <path d="M200 160 L280 160" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M200 160 L280 160" stroke="#666" stroke-width="3" fill="none"/>
+  <text x="240" y="150" font-family="Arial" font-size="11" fill="#666">/odom</text>
+  <text x="240" y="175" font-family="Arial" font-size="11" fill="#666">/joint_states</text>
+
+  <path d="M430 160 L510 160" stroke="#666" stroke-width="3" fill="none"/>
+  <text x="470" y="150" font-family="Arial" font-size="11" fill="#666">TCP</text>
+
+  <path d="M660 160 L700 160" stroke="#666" stroke-width="3" fill="none"/>
+  <text x="680" y="150" font-family="Arial" font-size="11" fill="#666">Sync</text>
+
+  <!-- Performance Metrics -->
+  <rect x="50" y="280" width="250" height="80" rx="10" fill="#E91E63"/>
+  <text x="175" y="310" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Performance Metrics
+  </text>
+  <text x="175" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Latency: &lt; 100ms • FPS: ≥ 30
+  </text>
+
+  <!-- Connection Details -->
+  <rect x="350" y="280" width="250" height="80" rx="10" fill="#00BCD4"/>
+  <text x="475" y="310" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Connection Details
+  </text>
+  <text x="475" y="335" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    IP: 127.0.0.1 • Port: 10000
+  </text>
+
+  <!-- Bidirectional Flow -->
+  <path d="M775 220 L775 280" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="790" y="250" font-family="Arial" font-size="10" fill="#999">
+    &lt;100ms
+  </text>
+</svg>

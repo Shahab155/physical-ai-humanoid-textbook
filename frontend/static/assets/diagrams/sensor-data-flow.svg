@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <rect width="900" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="30" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">
+    Sensor Data Flow Architecture
+  </text>
+
+  <!-- Gazebo Robot -->
+  <rect x="50" y="120" width="150" height="80" rx="10" fill="#4CAF50"/>
+  <text x="125" y="150" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    Gazebo Robot
+  </text>
+  <text x="125" y="175" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    LiDAR • Depth • IMU
+  </text>
+
+  <!-- Sensors -->
+  <rect x="280" y="60" width="120" height="60" rx="10" fill="#FF9800"/>
+  <text x="340" y="95" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    LiDAR Plugin
+  </text>
+
+  <rect x="280" y="130" width="120" height="60" rx="10" fill="#2196F3"/>
+  <text x="340" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    Depth Camera
+  </text>
+
+  <rect x="280" y="200" width="120" height="60" rx="10" fill="#9C27B0"/>
+  <text x="340" y="235" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    IMU Plugin
+  </text>
+
+  <!-- ROS 2 Topics -->
+  <rect x="480" y="60" width="150" height="60" rx="10" fill="#F44336"/>
+  <text x="555" y="85" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    /scan
+  </text>
+  <text x="555" y="105" font-family="Arial" font-size="11" text-anchor="middle" fill="white">
+    LaserScan
+  </text>
+
+  <rect x="480" y="130" width="150" height="60" rx="10" fill="#00BCD4"/>
+  <text x="555" y="155" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    /depth/image_raw
+  </text>
+  <text x="555" y="175" font-family="Arial" font-size="11" text-anchor="middle" fill="white">
+    Image
+  </text>
+
+  <rect x="480" y="200" width="150" height="60" rx="10" fill="#FF5722"/>
+  <text x="555" y="225" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    /imu/data
+  </text>
+  <text x="555" y="245" font-family="Arial" font-size="11" text-anchor="middle" fill="white">
+    Imu
+  </text>
+
+  <!-- RViz2 -->
+  <rect x="700" y="110" width="150" height="140" rx="10" fill="#673AB7"/>
+  <text x="775" y="170" font-family="Arial" font-size="16" text-anchor="middle" fill="white">
+    RViz2
+  </text>
+  <text x="775" y="195" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    Visualization
+  </text>
+  <text x="775" y="215" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    • Laser Scan
+  </text>
+  <text x="775" y="235" font-family="Arial" font-size="12" text-anchor="middle" fill="white">
+    • Depth Image
+  </text>
+
+  <!-- Data Logger -->
+  <rect x="700" y="280" width="150" height="60" rx="10" fill="#009688"/>
+  <text x="775" y="315" font-family="Arial" font-size="14" text-anchor="middle" fill="white">
+    Data Logger
+  </text>
+
+  <!-- Arrows -->
+  <path d="M200 160 L280 90" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M200 160 L280 160" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M200 160 L280 230" stroke="#666" stroke-width="3" fill="none"/>
+
+  <path d="M400 90 L480 90" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M400 160 L480 160" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M400 230 L480 230" stroke="#666" stroke-width="3" fill="none"/>
+
+  <path d="M630 90 L700 150" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M630 160 L700 180" stroke="#666" stroke-width="3" fill="none"/>
+  <path d="M630 230 L700 200" stroke="#666" stroke-width="3" fill="none"/>
+
+  <path d="M630 160 L700 310" stroke="#666" stroke-width="3" fill="none"/>
+</svg>

@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <!-- LiDAR Sensor Configuration -->
+  <model name='lidar_sensor'>
+    <static>true</static>
+    <pose>0 0 0.2 0 0 0</pose>
+    <link name='laser_link'>
+      <sensor type='ray' name='laser_scanner'>
+        <pose>0 0 0 0 0 0</pose>
+        <visualize>true</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.570796</min_angle>  <!-- -90 degrees -->
+              <max_angle>1.570796</max_angle>    <!-- +90 degrees -->
+            </horizontal>
+            <range>
+              <min>0.05</min>  <!-- 5cm -->
+              <max>10.0</max>  <!-- 10m -->
+              <resolution>0.01</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0.0</mean>
+              <stddev>0.001</stddev>
+            </noise>
+          </scan>
+        </ray>
+        <plugin name='gazebo_ros_laser_controller' filename='libgazebo_ros_laser.so'>
+          <ros>
+            <remapping>~/out:=/scan</remapping>
+          </ros>
+          <topic_name>/scan</topic_name>
+          <frame_name>laser_link</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+  </model>
+</sdf>
