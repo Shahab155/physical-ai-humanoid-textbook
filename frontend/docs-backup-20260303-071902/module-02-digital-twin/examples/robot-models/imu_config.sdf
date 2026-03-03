@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<sdf version='1.6'>
+  <!-- IMU Sensor Configuration -->
+  <model name='imu_sensor'>
+    <static>true</static>
+    <pose>0 0 0.1 0 0 0</pose>
+    <link name='imu_link'>
+      <sensor type='imu' name='imu_sensor'>
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>100</update_rate>
+        <visualize>true</visualize>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>0.00001</bias_mean>
+                <bias_stddev>0.000001</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>0.00001</bias_mean>
+                <bias_stddev>0.000001</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.0002</stddev>
+                <bias_mean>0.00001</bias_mean>
+                <bias_stddev>0.000001</bias_stddev>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </x>
+            <y>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </y>
+            <z>
+              <noise type='gaussian'>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+                <bias_mean>0.1</bias_mean>
+                <bias_stddev>0.001</bias_stddev>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+        <plugin name='imu_controller' filename='libgazebo_ros_imu.so'>
+          <ros>
+            <remapping>~/out:=/imu/data</remapping>
+          </ros>
+          <topic_name>/imu/data</topic_name>
+          <frame_name>imu_link</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+  </model>
+</sdf>
